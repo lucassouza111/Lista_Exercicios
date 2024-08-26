@@ -15,4 +15,4 @@ def obterValorUnitario(quantMaca):
 #Saídas
 valorUnitario = obterValorUnitario(qtdMaca)
 resposta = str(calculaCompra(qtdMaca, valorUnitario))
-print(f"O valor da compra é de: R$ {resposta.replace('.',',')}")
+print(f"O valor total da compra é de: R$ {resposta.replace('.',',')}")
