@@ -1,14 +1,15 @@
 # 5) Escreva um programa para ler um valor e escrever se é positivo ou negativo. Considere o valor zero como positivo.
 
 # entradas
-valor = int(input("Escreva um valor qualquer: "))
+valor = float(input("Escreva um valor qualquer: "))
 
 # processamento
-resposta = ""
-if valor >= 0:
-    resposta = "Positivo"
-else:
-    resposta = "Negativo"
+def ePositivo(val):
+    if val >= 0:
+        return True
+    return False
 
 #saídas
-print ("O valor é ", resposta)
+#resposta = "Positivo" if ePositivo(valor) == True else "Negativo"
+resposta = "Positivo" if ePositivo(valor) else "Negativo"
+print (f"O valor é {resposta}")

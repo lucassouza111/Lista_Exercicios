@@ -1,16 +1,19 @@
 # 6) Reescreva o programa do exercício anterior considerando o zero como neutro, ou seja, se for digitado o valor zero, escrever a palavra zero.
 
 # entradas
-valor = int(input("Escreva um valor qualquer: "))
+valor = float(input("Escreva um valor qualquer: "))
 
 # processamento
-resposta = ""
-if valor == 0:
-    resposta = "Zero"
-elif valor > 0:
-    resposta = "Positivo"
-else:
-    resposta = "Negativo"
+def ePositivo(val):
+    if val > 0:
+        return True
+    return False
+
+def verificaNumero(val):
+    if val == 0:
+        return "Zero"
+    return "Positivo" if ePositivo(val) else "Negativo"
 
 #saídas
-print ("O valor é ", resposta)
+resposta = verificaNumero(valor)
+print (f"O valor é {resposta}")

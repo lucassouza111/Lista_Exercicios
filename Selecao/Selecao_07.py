@@ -15,4 +15,4 @@ valor2 = float(input("Qual o segundo valor? "))
 resposta = valor1 if valor1 > valor2 else valor2
 
 # saídas
-print("O maior deles é ... ", resposta)
+print(f"O maior deles é ... {resposta}")

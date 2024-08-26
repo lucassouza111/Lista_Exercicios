@@ -4,27 +4,24 @@
 # entradas
 nota01 = float(input("Qual o valor da 1ª nota? "))
 nota02 = float(input("Qual o valor da 2ª nota? "))
-notaOpt = float(input("Qual o valor da avaliação optativa? (se não tiver valor, colocar zero) "))
+notaOpt = float(input("Qual o valor da avaliação optativa? (se não tiver valor, colocar -1) "))
 
 # processamento
-def mediaFinal():
-    nota011 = 0
-    if notaOpt == 0:
-        notaOpt == -1
-    elif nota01 < nota02:
-        nota011 == notaOpt
-    else:
-        nota02 == notaOpt
-    
-    return (nota011 + nota02) / 2
+def mediaFinal(nota1, nota2, notaOptativa):
+    if notaOptativa > -1:
+        if notaOptativa > nota1 and nota1 <= nota2:
+            nota1 = notaOptativa
+        elif notaOptativa > nota2:
+            nota2 = notaOptativa
+    return (nota1 + nota2) / 2
 
-def situacaoFinal():
-    if mediaFinal() >= 6:
+def situacaoFinal(med):
+    if med >= 6:
         return "Aprovado"
-    elif mediaFinal() < 3:
+    if med < 3:
         return "Reprovado"
-    else:
-        return "em Exame"
+    return "em Exame"
 
 # saídas
-print("No semestre, com a média ", mediaFinal(), ", o aluno está: ", situacaoFinal())
+media = mediaFinal(nota01, nota02, notaOpt)
+print(f"No semestre, com a média {media}, o aluno está: {situacaoFinal(media)}")
