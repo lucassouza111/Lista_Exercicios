@@ -2,12 +2,10 @@
 #Observação: Caso o código não seja nenhum dos especificados o produto deve ser encarado como Importado.
 
 # Entradas
-cod = int(input ("Entre com o Código: "))
+cod = int(input("Entre com o Código: "))
 
 #Processamento
-def obterRegiao (codigo):
-    print (codigo)
-    codigo = codigo + 2
+def obterRegiao(codigo):
     match codigo:
         case 1:
             return "Sul"
@@ -29,5 +27,4 @@ def obterRegiao (codigo):
             return "Importado"
 
 #Saídas
-print ("Este produto é de origem", obterRegiao (cod), ".")
-print (cod)
+print(f"Este produto é de origem {obterRegiao(cod)}.")

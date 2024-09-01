@@ -17,5 +17,5 @@ def situacaoFinal(med):
 
 # saídas
 media = mediaSem(nota01, nota02)
-print(f"Primeira nota: {nota01} Segunda nota {nota02} Média {media}")
+print(f"Primeira nota: {nota01} Segunda nota: {nota02} Média: {media}")
 print(f"No semestre a sua média foi de {media}. {situacaoFinal(media)}")
