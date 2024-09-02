@@ -6,21 +6,20 @@ valor2 = int(input("Insira o 2º valor: "))
 valor3 = int(input("Insira o 3º valor: "))
 
 #Processamento
-def compararNumeros(val,valComparar):
-    if val > valComparar:
-        return True
-    return False
+if(valor1 > valor2):
+      temp = valor1
+      valor1 = valor2
+      valor2 = temp
+ 
+if(valor1 > valor3):
+       temp = valor1
+       valor1 = valor3
+       valor3 = temp
 
-def trocarNumeros(val,valTrocar):
-    valBackup = val
-    return val == valTrocar and valTrocar == valBackup
-
-#print(trocarNumeros(valor1,valor2))
-print(valor1)
-valor1 = trocarNumeros(valor1,valor2) if compararNumeros(valor1,valor2) else valor1
-print(valor1)
-
-
+if(valor2 > valor3):
+       temp = valor2
+       valor2 = valor3
+       valor3 = temp
 
 #Saídas
-print(valor1,valor2,valor3)
+print(valor1, valor2, valor3)
